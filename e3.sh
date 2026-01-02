@@ -1,22 +1,20 @@
 #!/usr/bin/expect
 
 # =====================================================
-# NOC Automation Script (GitHub-Safe)
 # Author: Brian
-# Purpose: SSH into multiple nodes and run port checks
+# Purpose: SSH into multiple repeater RCPs and fetch optical parameters)
 # =====================================================
 
 set timeout 20
 
-# ---- Load secrets (LOCAL ONLY) ----
+
 source creds.secret.conf
 source nodes.secret.conf
 
-# ---- Logging ----
+
 log_file -a noc_session.log
 
-# ---- Generic Node Definitions ----
-# FORMAT: NODE_ID,PORT
+
 set nodes {
     "NODE01,port-u13/1"
     "NODE02,port-u7/1"
