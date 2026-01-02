@@ -1,0 +1,17 @@
+This is an automation tool designed to fetch span loss from DWDM longhaul repeater nodes with Ribbon Communications as a vendor
+It eliminates repetitive GUI clicks across multiple windows and provides a clean, reliable, and fast way to collect optical parameters from network devices.
+The tool is built using expect for automated SSH interactions, making it suitable for large-scale NOC operations.
+
+Features
+
+SSH into multiple Ribbon Apollo RCPs simultaneously
+
+Fetch optical parameters such as span loss from Add/Drop nodes
+
+Supports models: Apollo 9608, 9624, 9603
+
+Runs directly on EMS-STMS
+
+Eliminates manual GUI navigation, improving efficiency and reducing errors
+
+Timeout and error handling for unattended execution
