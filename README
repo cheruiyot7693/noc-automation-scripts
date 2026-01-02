@@ -15,3 +15,32 @@ Runs directly on EMS-STMS
 Eliminates manual GUI navigation, improving efficiency and reducing errors
 
 Timeout and error handling for unattended execution
+
+Usage
+
+Clone the repository:
+
+git clone git@github.com:cheruiyot7693/noc-automation-scripts.git
+cd noc-automation-scripts
+
+
+Make the script executable:
+
+chmod +x e3.sh
+
+
+Run the script on EMS-STMS:
+
+./e3.sh
+
+
+The script will SSH into the configured RCP nodes and fetch optical parameters. Output is printed in a clean, easy-to-read format.
+
+Configuration
+
+Timeout: Set in the script using:
+
+set timeout 20
+
+
+Node List: Modify the script to include the RCP IPs or hostnames to target multiple Add/Drop nodes.
