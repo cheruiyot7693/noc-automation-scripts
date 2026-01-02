@@ -4,7 +4,7 @@
 # Author: Brian
 # Purpose: SSH into multiple repeater RCPs and fetch optical parameters)
 # This script is run on the EMS-STMS
-# It applies to Ribbon Apollo 9608, 9624 and 9603
+# It applies to Ribbon Apollo 9608, 9624 and 9603 RCPs for Add and Drop nodes
 # =====================================================
 
 set timeout 20
