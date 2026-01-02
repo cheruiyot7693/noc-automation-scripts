@@ -81,4 +81,4 @@ foreach node $nodes {
 
 # ---- Close log ----
 log_file
-puts "✔ Script execution completed"
+puts "Done go fetch the log file for further analysis"
