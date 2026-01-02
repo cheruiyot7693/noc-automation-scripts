@@ -3,6 +3,7 @@
 # =====================================================
 # Author: Brian
 # Purpose: SSH into multiple repeater RCPs and fetch optical parameters)
+# This script is run on the EMS-STMS
 # =====================================================
 
 set timeout 20
