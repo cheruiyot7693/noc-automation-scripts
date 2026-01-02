@@ -32,13 +32,13 @@ foreach node $nodes {
 
     # Resolve real IP from secret mapping
     if {![dict exists $NODE_IPS $node_id]} {
-        puts "$node_id: ❌ No IP mapping found"
+        puts "$node_id: No IP mapping found"
         continue
     }
 
     set host [dict get $NODE_IPS $node_id]
 
-    puts "🔗 Connecting to $node_id ($host)"
+    puts " Connecting to $node_id ($host)"
 
     spawn ssh $username@$host
 
@@ -54,7 +54,7 @@ foreach node $nodes {
         }
 
         -re "Last login:" {
-            puts "✅ $node_id: Login successful"
+            puts " $node_id: Login successful"
             expect ">"
             send "show chassis port oncp $port | grep Actual\r"
             expect ">"
@@ -62,19 +62,19 @@ foreach node $nodes {
         }
 
         -re "Permission denied" {
-            puts "❌ $node_id: Authentication failed"
+            puts " $node_id: Authentication failed"
         }
 
         -re "Connection refused" {
-            puts "❌ $node_id: Connection refused"
+            puts " $node_id: Connection refused"
         }
 
         timeout {
-            puts "⏱️ $node_id: Connection timed out"
+            puts " $node_id: Connection timed out"
         }
 
         eof {
-            puts "⚠️ $node_id: Connection closed unexpectedly"
+            puts " $node_id: Connection closed unexpectedly"
         }
     }
 }
